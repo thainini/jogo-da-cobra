@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Senha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="recuperar-container">
+    <form id="recuperarForm">
+      <input type="email" id="emailRecuperar" placeholder="E-mail" required>
+      <button type="submit" class="btn">Enviar Link de Recuperação</button>
+    </form>
+    <a href="index.html" class="btn">Voltar</a>
+    <p id="mensagem"></p>
+  </div>
+
+  <script src="script.js"></script>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    
+    emailjs.init("SUA_PUBLIC_KEY_AQUI"); 
+
+    document.getElementById("recuperarForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("emailRecuperar").value;
+      const mensagem = document.getElementById("mensagem");
+
+     
+      emailjs.send("SEU_SERVICE_ID", "SEU_TEMPLATE_ID", {
+        email_destino: email
+      })
+      .then(() => {
+        mensagem.textContent = "✅ E-mail de recuperação enviado com sucesso!";
+        mensagem.style.color = "lightgreen";
+      })
+      .catch((error) => {
+        console.error("Erro ao enviar o e-mail:", error);
+        mensagem.textContent = "❌ Erro ao enviar o e-mail. Tente novamente.";
+        mensagem.style.color = "red";
+      });
+    });
+  </script>
+
+</body>
+</html>

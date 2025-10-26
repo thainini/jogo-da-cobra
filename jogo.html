@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Cobrinha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="jogo">
+
+    <div class="container-jogo">
+        
+        <canvas id="snakeGame" width="500" height="500"></canvas>
+
+        
+        <div class="info-jogo">
+            <p id="pontuacao">Pontuação: <span id="score">0</span></p>
+            <div class="botoes-jogo">
+                <a href="index.html" class="btn">Sair</a>
+                <button id="restartBtn" class="btn">Recomeçar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="snake.js"></script>
+</body>
+</html>
