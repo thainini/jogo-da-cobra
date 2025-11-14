@@ -7,127 +7,97 @@ body {
     background-image: url('Imagem.png');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     color: black;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     margin: 0;
+    padding: 20px;
 }
-
 
 .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end; 
-    height: 100vh; 
-    padding-bottom: 250px; 
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
 }
-
 
 .botoes {
     display: flex;
     justify-content: center;
-    gap: 20px; 
-    flex-wrap: wrap; 
-    padding: 20px 30px;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
 }
-
 
 .btn {
     display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
+    margin: 5px;
+    padding: 12px 20px;
     background: #165c18;
     color: white;
     text-decoration: none;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
     transition: 0.3s;
+    min-width: 140px;
+    flex: 1;
+    max-width: 200px;
 }
 
 .btn:hover {
     background: #45a049;
 }
 
-recuperar-container h2 {
-  color: white;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
+.recuperar-container h2,
+.login-container h2,
+.cadastro-container h2 {
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-size: 24px;
 }
 
-
-login-container h2 {
-  color: white;
-  margin-bottom: 25px;
-  letter-spacing: 2px;
-}
-
-
-#loginForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 350px;
-}
-
-#loginForm input {
-  margin-bottom: 10px;
-  padding: 10px;
-  width: 200px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-
-#recuperarForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 350px;
-}
-
-#recuperarForm input {
-  margin-bottom: 10px;
-  padding: 10px;
-  width: 200px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-
-
-cadastro-container h2 {
-  color: white;
-  margin-bottom: 25px;
-  letter-spacing: 2px;
-}
-
-
+#loginForm,
+#recuperarForm,
 #cadastroForm {
-  display: inline-block;
-  align-items: center;
-  margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
 }
 
+#loginForm input,
+#recuperarForm input,
 #cadastroForm input {
-  margin-bottom: 10px;
-  padding: 10px;
-  width: 200px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+    margin-bottom: 15px;
+    padding: 12px;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
 }
-
 
 canvas {
     background: black;
-    display: inline-block;
-    margin-top: 30px;
+    display: block;
+    max-width: 100%;
+    height: auto;
     margin: 20px auto;
     border: 2px solid #fff;
 }
@@ -136,91 +106,242 @@ canvas {
     background-image: url('Imagem.png');
 }
 
-
 .body.jogo {
-    margin-top: 50px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
-
 
 p {
-    font-size: 18px;
+    font-size: 16px;
     color: white;
-    display: inline-block;
+    text-align: center;
+    margin: 10px 0;
 }
-
 
 .sobre-container {
     display: flex;
     flex-direction: column;
-    align-items: center;        
-    justify-content: center;    
-    text-align: center;
-    height: 90vh;
-    color: white;               
-    background-color: #000;     
-    padding: 15px;
-    border-radius: 15px;        
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8); 
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-
-body {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;
 }
-
 
 .sobre-container ul {
     list-style: none;
     padding: 0;
-    margin: 90px 0;
+    margin: 20px 0;
 }
 
 .sobre-container li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
-
-
 
 .container-jogo {
     display: flex;
-    flex-direction: column;      
-    align-items: center;         
-    justify-content: center;     
-    height: 100vh;               
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     width: 100%;
+    padding: 20px;
 }
-
-
-canvas {
-    background: black;
-    display: block;
-    margin: 0 auto;
-    border: 2px solid #fff;
-}
-
 
 .info-jogo {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
 }
-
 
 #pontuacao {
-    font-size: 20px;
+    font-size: 18px;
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
 }
-
 
 .botoes-jogo {
     display: flex;
     justify-content: center;
-    gap: 15px;                   
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+        min-height: 100vh;
+        height: auto;
+    }
+    
+    .menu {
+        padding: 10px;
+        justify-content: flex-start;
+        margin-top: 50px;
+    }
+    
+    .botoes {
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .btn {
+        font-size: 14px;
+        padding: 10px 15px;
+        min-width: 120px;
+        margin: 3px;
+    }
+    
+    #loginForm,
+    #recuperarForm,
+    #cadastroForm {
+        margin: 10px auto;
+        padding: 15px;
+    }
+    
+    #loginForm input,
+    #recuperarForm input,
+    #cadastroForm input {
+        padding: 10px;
+        font-size: 14px;
+        max-width: 200px;
+    }
+    
+    .sobre-container {
+        min-height: 70vh;
+        padding: 15px;
+        margin: 10px auto;
+    }
+    
+    .sobre-container h2 {
+        font-size: 20px;
+    }
+    
+    .sobre-container li {
+        font-size: 14px;
+    }
+    
+    #pontuacao {
+        font-size: 16px;
+    }
+    
+    canvas {
+        margin: 10px auto;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .menu {
+        margin-top: 30px;
+    }
+    
+    .botoes {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: none;
+        margin: 2px 0;
+        font-size: 14px;
+        padding: 12px;
+    }
+    
+    .recuperar-container h2,
+    .login-container h2,
+    .cadastro-container h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    #loginForm,
+    #recuperarForm,
+    #cadastroForm {
+        padding: 10px;
+        margin: 5px auto;
+    }
+    
+    #loginForm input,
+    #recuperarForm input,
+    #cadastroForm input {
+        padding: 8px;
+        font-size: 14px;
+        max-width: 180px;
+    }
+    
+    .sobre-container {
+        padding: 10px;
+        min-height: 60vh;
+    }
+    
+    .sobre-container h2 {
+        font-size: 18px;
+    }
+    
+    .sobre-container li {
+        font-size: 13px;
+    }
+    
+    .botoes-jogo {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .botoes-jogo .btn {
+        width: 100%;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    canvas {
+        max-width: 100%;
+        border-width: 1px;
+    }
+}
+
+@media (max-width: 320px) {
+    .btn {
+        font-size: 12px;
+        padding: 10px;
+    }
+    
+    #loginForm input,
+    #recuperarForm input,
+    #cadastroForm input {
+        max-width: 150px;
+        font-size: 12px;
+    }
+    
+    .sobre-container {
+        padding: 8px;
+    }
+    
+    .sobre-container h2 {
+        font-size: 16px;
+    }
 }
